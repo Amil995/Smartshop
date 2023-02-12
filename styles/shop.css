@@ -1,0 +1,231 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body{
+margin: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+
+input:focus{outline: none;}
+
+.text > span{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.text > span > span{
+    color: #3F69FF;
+}
+
+.links ul li{
+    color:#3d3d3d;
+    font-size:18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+.links ul{
+    display: flex;
+    list-style: none;
+    gap:52px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.icons svg{
+    height: 24px;
+}
+
+.navbar{
+    background-color: white;
+    display: flex;
+    padding: 10px 50px;
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links ul li:hover{
+    color: #3F69FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Categories */
+.categories{
+    background-color: #3F69FF;
+    width: 100%;
+    padding: 25px 50px;
+    height: 90px;
+    transition: 0.5s;
+    overflow: hidden;
+}.categories.active{height: 300px;}
+
+.categories .show_area{
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories .categories_button{
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.categories .categories_button .button{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+}
+
+.categories .categories_button .button.active div:nth-child(1){transform: translate(0px, 10px)  rotate(45deg);border-radius: 5px;}
+.categories .categories_button .button.active div:nth-child(2){opacity: 0;}
+.categories .categories_button .button.active div:nth-child(3){transform: translate(0px, -10px) rotate(-45deg);border-radius: 5px;}
+
+.categories .categories_button .button div{
+    width: 30px !important;
+    height: 5px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.categories .input{
+    position: relative;
+    height: 40px;
+    width: 300px;
+}
+
+.categories .input input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    text-indent: 10px;
+    border-radius: 10px;
+}
+
+.categories .input div{
+    height: 100%;
+    position: absolute;
+    width: 30px;
+    right: 3px;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.categories .input svg{
+    height: 50%;
+}
+
+.categories .categories_links{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 25px;
+}
+
+.categories .categories_links .c-links{
+    width: 20%;
+    min-width: 300px;
+    color: rgb(190, 190, 190);
+    text-transform: capitalize;
+}
+
+.categories .categories_links li{
+    list-style: none;
+    text-indent: 5px;
+    text-transform: lowercase;
+}
+
+/* Body */
+.body{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.body .card{
+    width: 15%;
+    min-width: 300px;
+}
+
+.body .card .image{
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 0 6px #0000003d;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.body .card .image img{
+    height: 100%;
+}
+.footer{
+    background-color: #3F69FF;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding:70px;
+    height:250px;
+}
+.footer ul{
+    list-style: none;
+}
+
+.input3{
+    border-radius:8px;
+    height:25px;
+    width:300px;
+}
+.instagram{
+    width: 24px;
+    height: 24px;
+    margin-top: 70px;
+    margin-left: 10px;
+}
+.twitter{
+    width: 24px;
+    height: 24px;
+    
+}
+
+/*Image hovers*/
+
+
+.image1:hover{
+    content:url(https://images.samsung.com/is/image/samsung/p6pim/za/feature/others/za-feature-galaxy-a32-a325-478351867?$FB_TYPE_K_MO_JPG$);
+    width: 200px;
+    height: 300px;
+    
+}
+
+.image2:hover{
+    content:url(data:image/jpeg;base64,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)
+    }
+.image3:hover{
+    content: url(https://img.zoommer.ge/zoommer-images/thumbs/0085445_apple-iphone-x-64gb-grey_550.jpeg);
+}
+.image4:hover{
+    content:url(https://hotsale.ge/files/offers/mober/45.jpg);
+}
